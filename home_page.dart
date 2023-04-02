@@ -13,19 +13,23 @@ class HomePage extends StatefulWidget {
 
 class _MyWidgetState extends State<HomePage> {
   void _abrirEmpresa() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Empresa()));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const Empresa()));
   }
 
   void _abrirServico() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Servico()));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const Servico()));
   }
 
   void _abrirCliente() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Cliente()));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const Cliente()));
   }
 
   void _abrirContato() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Contato()));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const Contato()));
   }
 
   @override
@@ -37,53 +41,53 @@ class _MyWidgetState extends State<HomePage> {
       //   backgroundColor: Colors.cyan,
       // ),
       body: Container(
-        padding: EdgeInsets.all(30),
+        padding: const EdgeInsets.all(30),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Image.asset('imagens/logo.png'),
-            Padding(padding: EdgeInsets.only(bottom: 20)),
+            const Padding(padding: EdgeInsets.only(bottom: 20)),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 GestureDetector(
+                  onTap: _abrirEmpresa,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset('imagens/menu_empresa.png'),
                   ),
-                  onTap: _abrirEmpresa,
                 ),
-                Padding(padding: EdgeInsets.only(right: 20)),
+                const Padding(padding: EdgeInsets.only(right: 20)),
                 GestureDetector(
+                  onTap: _abrirServico,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset('imagens/menu_servico.png'),
                   ),
-                  onTap: _abrirServico,
                 ),
               ],
             ),
-            Padding(padding: EdgeInsets.only(bottom: 20)),
+            const Padding(padding: EdgeInsets.only(bottom: 20)),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 GestureDetector(
+                  onTap: _abrirCliente,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset('imagens/menu_cliente.png'),
                   ),
-                  onTap: _abrirCliente,
                 ),
-                Padding(padding: EdgeInsets.only(right: 20)),
+                const Padding(padding: EdgeInsets.only(right: 20)),
                 GestureDetector(
+                  onTap: _abrirContato,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset('imagens/menu_contato.png'),
                   ),
-                  onTap: _abrirContato,
                 ),
               ],
             ),
