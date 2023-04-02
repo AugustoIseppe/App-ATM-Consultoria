@@ -71,12 +71,18 @@ class _MyWidgetState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 GestureDetector(
-                  child: Image.asset('imagens/menu_cliente.png'),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset('imagens/menu_cliente.png'),
+                  ),
                   onTap: _abrirCliente,
                 ),
                 Padding(padding: EdgeInsets.only(right: 20)),
                 GestureDetector(
-                  child: Image.asset('imagens/menu_contato.png'),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset('imagens/menu_contato.png'),
+                  ),
                   onTap: _abrirContato,
                 ),
               ],
